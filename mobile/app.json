@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "量化基金交易",
+    "slug": "quant-fund",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0d1117"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.quant.fund"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0d1117"
+      },
+      "package": "com.quant.fund"
+    },
+    "plugins": [
+      "react-native-reanimated"
+    ]
+  }
+}
