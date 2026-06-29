@@ -72,6 +72,14 @@ class Config:
         "588000": {"name": "科创50", "sector_code": "", "index_code": "000688"},
     }
 
+    # OCR 模糊匹配用的已知基金白名单 (逗号分隔, 在 .env 中配置 KNOWN_FUNDS)
+    _known_funds_env = os.getenv("KNOWN_FUNDS", "")
+    KNOWN_FUNDS = [f.strip() for f in _known_funds_env.split(",") if f.strip()] if _known_funds_env else [
+        "易方达沪深300ETF联接A",
+        "招商中证白酒指数(LOF)A",
+        "天弘中证500指数增强A",
+    ]
+
     # A股交易日历 (2025-2026 近似, 可动态更新)
     TRADING_HOURS = {
         "morning_open": "09:30",

@@ -72,17 +72,8 @@ NOISE_PATTERNS = [
     "扫一扫", "收付款", "出行", "市民中心",
 ]
 
-# 已知基金白名单 (用于OCR模糊匹配修正)
-KNOWN_FUNDS = [
-    "摩根标普500指数(QDII)A",
-    "嘉实中证稀土产业ETF联接C",
-    "永赢先进制造智选混合C",
-    "西部利得智享量化选股混合C",
-    "中加量化选股混合A",
-    "东方低碳经济混合C",
-    "天弘纳斯达克100指数(QDII)C",
-    "华泰保兴尊诚一年定期开放债券",
-]
+# 已知基金白名单 (从 config 读取, 在 .env 的 KNOWN_FUNDS 中配置)
+KNOWN_FUNDS = Config.KNOWN_FUNDS
 
 # 财富号/广告行关键词块 (包含任一词即丢弃)
 WEALTH_KEYWORDS = {
